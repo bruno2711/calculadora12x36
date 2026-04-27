@@ -3,6 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="manifest" href="manifest.json">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <script>
+        if ('ServiceWorker' in navigator){
+            navigator.serviceWorker.register('sw.js');
+        }
+    </script>
     <script src="calc.js"></script>
     <title>Calculadora</title>
 </head>

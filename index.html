@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="manifest" href="manifest.json">
     <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="stylesheet" href="style.css">
     <script>
         if ('ServiceWorker' in navigator){
             navigator.serviceWorker.register('sw.js');
@@ -14,8 +15,14 @@
     <title>Calculadora</title>
 </head>
 <body>
-    <input type="date" name="data-trabalhada" id="data-trabalhada" placeholder="Data Trabalhada">
-    <input type="date" name="data" id="data" placeholder="Data">
+    <label for="">Ultimo dia trabalhado
+        <input type="date" name="data-trabalhada" id="data-trabalhada" placeholder="Data Trabalhada">
+    </label>
+    
+    <label for="">Dia que quer verificar
+        <input type="date" name="data" id="data" placeholder="Data">
+    </label>
+    
     <button onclick="verificarTrabalho()">Verificar</button>
     <br>
     <br>

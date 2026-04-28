@@ -25,15 +25,13 @@ jobs:
       - name: Build Web Assets
         run: |
           mkdir -p www
-          # Busca o index que está lá no fundo da pasta android e traz para o www
-          cp ./android/app/src/main/assets/public/index.html www/
+          # Tenta copiar os arquivos da raiz. 
+          # Se não achar na raiz, ele tenta buscar em qualquer subpasta (exceto node_modules e android)
+          find . -name "index.html" -not -path "./node_modules/*" -not -path "./android/*" -exec cp {} www/ \;
+          find . -name "calc.js" -not -path "./node_modules/*" -not -path "./android/*" -exec cp {} www/ \;
+          find . -name "style.css" -not -path "./node_modules/*" -not -path "./android/*" -exec cp {} www/ \;
           
-          # Se os outros arquivos estiverem na raiz, ele copia. 
-          # Se estiverem em www, ele garante que fiquem lá.
-          cp calc.js www/ 2>/dev/null || :
-          cp style.css www/ 2>/dev/null || :
-          
-          echo "Conteúdo da pasta www para o build:"
+          echo "Arquivos movidos para a pasta www:"
           ls www
 
       - name: Setup Java

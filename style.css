@@ -2,10 +2,10 @@ body{
     font-family: "hagrid", sans-serif;
     color: #ffe192;
     background-color: #012014;
+    height: 100vh;
     margin: 0;
     padding: 20px;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -22,7 +22,7 @@ body{
     border-radius: 30px;
     border-width: 2px;
     border-style: solid;
-    width: 300px;
+    width: 350px;
     height: 400px;
 }
 

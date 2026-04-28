@@ -25,9 +25,16 @@ jobs:
       - name: Build Web Assets
         run: |
           mkdir -p www
-          cp index.html www/
-          cp calc.js www/
-          cp style.css www/
+          # Busca o index que está lá no fundo da pasta android e traz para o www
+          cp ./android/app/src/main/assets/public/index.html www/
+          
+          # Se os outros arquivos estiverem na raiz, ele copia. 
+          # Se estiverem em www, ele garante que fiquem lá.
+          cp calc.js www/ 2>/dev/null || :
+          cp style.css www/ 2>/dev/null || :
+          
+          echo "Conteúdo da pasta www para o build:"
+          ls www
 
       - name: Setup Java
         uses: actions/setup-java@v4

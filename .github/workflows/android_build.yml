@@ -27,7 +27,7 @@ jobs:
           mkdir -p www
           cp index.html www/
           cp calc.js www/
-          # Se tiver CSS, adicione aqui: cp style.css www/
+          cp style.css www/
 
       - name: Setup Java
         uses: actions/setup-java@v4

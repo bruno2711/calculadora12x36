@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="manifest" href="manifest.json">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        if ('ServiceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js');
+        }
+    </script>
+    <script src="calc.js"></script>
+    <title>Calculadora</title>
+</head>
+
+<body>
+    <div id="container">
+        <h2>Calculadora de Trabalho</h2>
+        <label for="data-trabalhada">Ultimo dia trabalhado
+            <br>
+            <input type="date" name="data-trabalhada" id="data-trabalhada" placeholder="Data Trabalhada">
+        </label>
+        <br>
+        <label for="data">Dia que quer verificar
+            <br>
+            <input type="date" name="data" id="data" placeholder="Data">
+        </label>
+
+        <button id="verificar-btn" onclick="verificarTrabalho()">Verificar</button>
+        <br>
+        <br>
+        <span>
+            Trabalha ou nao trabalha?
+            <br>
+            <span id="resultado"></span>
+        </span>
+    </div>
+</body>
+
+</html>

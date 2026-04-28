@@ -1,0 +1,52 @@
+body{
+    font-family: "hagrid", sans-serif;
+    color: #ffe192;
+    background-color: #012014;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#container{
+    background-color: #012b1b;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    text-align: center;
+    border-color: #395244;
+    border-radius: 30px;
+    border-width: 2px;
+    border-style: solid;
+    width: 300px;
+    height: 400px;
+}
+
+input[type="date"]{
+    display: inline-flex;
+    align-items: center;
+    background-color: #012014;
+    color: #ffe192;
+    border-color: #395244;
+    border-radius: 10px;
+    border-width: 2px;
+    border-style: solid;
+    padding: 5px;
+    margin-top: 10px;
+}
+
+#verificar-btn{
+    background-color: #012014;
+    color: #ffe192;
+    border-color: #395244;
+    border-radius: 10px;
+    border-width: 2px;
+    border-style: solid;
+    padding: 10px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+}

@@ -50,3 +50,27 @@ input[type="date"]{
     margin-top: 20px;
     cursor: pointer;
 }
+
+.resultado-sim{
+    background-color: #ad2402;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff0cb;
+    border-color: #5f8670;
+    border-radius: 5px;
+    border-width: 1px;
+    border-style: solid;
+    padding: 1px 10px;
+}
+
+.resultado-nao{
+    background-color: #004718;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff0cb;
+    border-color: #5f8670;
+    border-radius: 5px;
+    border-width: 1px;
+    border-style: solid;
+    padding: 1px 10px;
+}
